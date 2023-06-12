@@ -6,24 +6,15 @@
 
     <div class="nome-div">
       <label class="padding-label" for="nome-item">Nome do item</label>
-      <label class="padding-label" for="qnt-item">Quantidade de itens desejada</label>
-
-      <div>
-        <input type="textarea" class="input" id="nome-item" name="nome-item" placeholder="Digite o nome do item">
-        <input type="number" class="input" id="qnt-item" name="qnt-item" placeholder="Digite a quantidade de itens desejada">
-      </div>
+      <input type="textarea" class="input" id="nome-item" name="nome-item" placeholder="Digite o nome do item" [(ngModel)]="calculadora.nome">
+      <label class="padding-label" for="qnt-item">Qnt</label>
+      <input type="number" class="input" id="qnt-item" name="qnt-item" placeholder="Digite a quantidade de itens desejada" [(ngModel)]="calculadora.qnt_item">
     </div>
 
     <div class="receita-div">
-      <label for="autoria">Receita do item</label><br>
-      <input type="text" class="input" id="receita-item1" name="receita-item" placeholder="Receita do item">
-      <input type="text" class="input" id="receita-item2" name="receita-item" placeholder="Receita do item">
-      <input type="text" class="input" id="receita-item3" name="receita-item" placeholder="Receita do item">
-      <input type="text" class="input" id="receita-item4" name="receita-item" placeholder="Receita do item">
-      <input type="text" class="input" id="receita-item5" name="receita-item" placeholder="Receita do item">
-      <input type="text" class="input" id="receita-item6" name="receita-item" placeholder="Receita do item">
-      <input type="text" class="input" id="receita-item7" name="receita-item" placeholder="Receita do item">
-      <input type="text" class="input" id="receita-item8" name="receita-item" placeholder="Receita do item">
+      <label for="receita">Receita do item</label><br>
+      <input type="text" class="input" id="receita-item1" name="receita-nome" placeholder="Receita do item" [(ngModel)]="calculadora.receita">
+      <input type="number" class="input" id="qnt-item1" name="receita-item" placeholder="Receita do item" [(ngModel)]="calculadora.qnt_receita">
     </div>
 
     <label for="modelo">Selecione o modelo do card:</label>
@@ -54,8 +45,8 @@
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azuis claro">
-          <p class="conteudo">Teste</p>
-          <p class="autoria"><b>Teste</b></p>
+          <p class="conteudo">{{calculadora.nome}}</p>
+          <p class="autoria"><b>{{calculadora.qnt_item * calculadora.qnt_receita}}</b></p>
         </div>
       </div>
 

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class InputCalculadoraComponent {
 
+  calculadora = {
+    id: 1,
+    nome: "Cinto",
+    qnt_item: 2,
+    receita: "Tecido",
+    qnt_receita: 3
+  }
 }
