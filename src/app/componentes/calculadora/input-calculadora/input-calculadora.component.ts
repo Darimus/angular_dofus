@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Item } from '../item';
 
 @Component({
   selector: 'app-input-calculadora',
@@ -7,11 +8,14 @@ import { Component } from '@angular/core';
 })
 export class InputCalculadoraComponent {
 
-  calculadora = {
-    id: 1,
-    nome: "Cinto",
-    qnt_item: 2,
-    receita: "Tecido",
-    qnt_receita: 3
+  @Input() calculadora: Item = {
+    id: 0,
+    nome_item: "Manopla",
+    qnt_item: 5,
+    receitas: {
+      item1: "Couro",
+      qnt_item: 10,
+      coeficiente: 500
+    }
   }
 }

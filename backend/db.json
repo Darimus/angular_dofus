@@ -1,0 +1,24 @@
+{
+  "itens": [
+    {
+      "id": 1,
+      "nome_item": "Manopla",
+      "qnt_item": 5,
+      "receitas": {
+        "item1": "Couro",
+        "qnt_item": 10,
+        "coeficiente": 500
+      }
+    },
+    {
+      "id": 2,
+      "nome_item": "Manopla Thunder",
+      "qnt_item": 15,
+      "receitas": {
+        "item1": "Tecido",
+        "qnt_item": 2,
+        "coeficiente": 100
+      }
+    }
+  ]
+}

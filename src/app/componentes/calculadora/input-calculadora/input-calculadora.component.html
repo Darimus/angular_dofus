@@ -6,15 +6,15 @@
 
     <div class="nome-div">
       <label class="padding-label" for="nome-item">Nome do item</label>
-      <input type="textarea" class="input" id="nome-item" name="nome-item" placeholder="Digite o nome do item" [(ngModel)]="calculadora.nome">
+      <input type="textarea" class="input" id="nome-item" name="nome-item" placeholder="Digite o nome do item" [(ngModel)]="calculadora.nome_item">
       <label class="padding-label" for="qnt-item">Qnt</label>
       <input type="number" class="input" id="qnt-item" name="qnt-item" placeholder="Digite a quantidade de itens desejada" [(ngModel)]="calculadora.qnt_item">
     </div>
 
     <div class="receita-div">
       <label for="receita">Receita do item</label><br>
-      <input type="text" class="input" id="receita-item1" name="receita-nome" placeholder="Receita do item" [(ngModel)]="calculadora.receita">
-      <input type="number" class="input" id="qnt-item1" name="receita-item" placeholder="Receita do item" [(ngModel)]="calculadora.qnt_receita">
+      <input type="text" class="input" id="receita-item1" name="receita-nome" placeholder="Receita do item" [(ngModel)]="calculadora.receitas.item1">
+      <input type="number" class="input" id="qnt-item1" name="receita-item" placeholder="Receita do item" [(ngModel)]="calculadora.receitas.qnt_item">
     </div>
 
     <label for="modelo">Selecione o modelo do card:</label>
@@ -45,8 +45,9 @@
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azuis claro">
-          <p class="conteudo">{{calculadora.nome}}</p>
-          <p class="autoria"><b>{{calculadora.qnt_item * calculadora.qnt_receita}}</b></p>
+          <p class="conteudo">{{calculadora.nome_item}}</p>
+          <p>{{calculadora.receitas.qnt_item}} qnt:</p>
+          <p class="autoria"><b>{{calculadora.qnt_item * calculadora.receitas.qnt_item}}</b></p>
         </div>
       </div>
 
