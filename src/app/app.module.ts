@@ -9,18 +9,24 @@ import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 import { InputCalculadoraComponent } from './componentes/calculadora/input-calculadora/input-calculadora.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
+import { ListarItensComponent } from './componentes/calculadora/listar-itens/listar-itens.component';
+import { ItemComponent } from './componentes/calculadora/item/item.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabecalhoComponent,
     InputCalculadoraComponent,
-    RodapeComponent
+    RodapeComponent,
+    ListarItensComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
