@@ -12,3 +12,5 @@
     "src/**/*.d.ts"
   ]
 }
+
+// Fazer um array de objetos no db.json e depois fazer um loop para mostrar em tela NÂO ESQUECER

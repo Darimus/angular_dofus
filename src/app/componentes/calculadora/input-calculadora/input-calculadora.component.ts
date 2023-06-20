@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { Item } from '../item';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { Item } from '../item';
 import { CalculadoraService } from '../calculadora.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { CalculadoraService } from '../calculadora.service';
   templateUrl: './input-calculadora.component.html',
   styleUrls: ['./input-calculadora.component.scss']
 })
-export class InputCalculadoraComponent {
+export class InputCalculadoraComponent implements OnInit{
 
   @Input() item: Item = {
     id: 0,
@@ -26,6 +27,9 @@ export class InputCalculadoraComponent {
     private service: CalculadoraService,
     private route: Router
   ){}
+
+  ngOnInit(): void {
+  }
 
   criarItem(){
     this.service.criar(this.item).subscribe(() => {

@@ -21,10 +21,12 @@ h1 {
 }
 
 h2 {
-  color: #154580;
+  color: white;
   font-weight: bold;
   font-size: 2rem;
   text-align: center;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 20px;
 }
 
 .header {
