@@ -13,11 +13,12 @@ export class ItemComponent implements OnInit{
     nome_item: "Cinto",
     qnt_item: 10,
     modelo: "modelo2",
-    receitas: {
-      item1: "Linho",
+    coeficiente: 200,
+    receitas: [{
+      item: "Linho",
       qnt_item: 3,
-      coeficiente: 200
-    }
+
+    }]
   }
 
   ngOnInit(): void {

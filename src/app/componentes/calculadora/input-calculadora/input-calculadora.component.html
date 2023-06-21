@@ -13,7 +13,7 @@
 
     <div class="receita-div">
       <label for="receita">Receita do item</label><br>
-      <input type="text" class="input" id="receita-item1" name="receita-nome" placeholder="Receita do item" [(ngModel)]="item.receitas.item1">
+      <input type="text" class="input" id="receita-item1" name="receita-nome" placeholder="Receita do item" [(ngModel)]="item.receitas.item">
       <input type="number" class="input" id="qnt-item1" name="receita-item" placeholder="Receita do item" [(ngModel)]="item.receitas.qnt_item">
     </div>
 
@@ -46,8 +46,8 @@
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azuis claro">
           <p class="conteudo">{{item.nome_item}}</p>
-          <p>{{item.receitas.qnt_item}} qnt:</p>
-          <p class="autoria"><b>{{item.qnt_item * item.receitas.qnt_item}}</b></p>
+          <p *ngFor="let receita of item.receitas">{{receita.qnt_item}} qnt:</p>
+          <p *ngFor="let receita of item.receitas" class="autoria"><b>{{item.qnt_item * receita.qnt_item}}</b></p>
         </div>
       </div>
 

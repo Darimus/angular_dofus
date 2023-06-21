@@ -1,70 +1,45 @@
 {
   "itens": [
     {
-      "id": 1,
-      "nome_item": "Manopla",
-      "qnt_item": 5,
-      "modelo": "modelo2",
-      "receitas": {
-        "item1": "Couro",
-        "qnt_item": 10,
-        "coeficiente": 500
-      }
-    },
-    {
-      "id": 2,
-      "nome_item": "Manopla Thunder",
-      "qnt_item": 15,
-      "modelo": "modelo2",
-      "receitas": {
-        "item1": "Tecido",
-        "qnt_item": 2,
-        "coeficiente": 100
-      }
-    },
-    {
-      "id": 3,
-      "nome_item": "Manopla",
-      "qnt_item": 5,
-      "modelo": "modelo2",
-      "receitas": {
-        "item1": "Couro",
-        "qnt_item": 10,
-        "coeficiente": 500
-      }
-    },
-    {
-      "id": 4,
-      "nome_item": "Manopla",
-      "qnt_item": 5,
-      "modelo": "modelo2",
-      "receitas": {
-        "item1": "Couro",
-        "qnt_item": 10,
-        "coeficiente": 500
-      }
-    },
-    {
-      "id": 5,
-      "nome_item": "Manopla",
-      "qnt_item": 5,
-      "modelo": "modelo2",
-      "receitas": {
-        "item1": "Couro",
-        "qnt_item": 10,
-        "coeficiente": 500
-      }
-    },
-    {
       "id": 6,
       "nome_item": "Manopla",
       "qnt_item": 5,
       "modelo": "modelo2",
-      "receitas": {
-        "item1": "Couro",
-        "qnt_item": 10,
-        "coeficiente": 500
-      }
+      "coeficiente": 500,
+      "receitas": [
+        {
+          "item": "Couro",
+          "qnt_item": 8
+        },
+        {
+          "item": "Leite",
+          "qnt_item": 7
+        },
+        {
+          "item": "Pedra",
+          "qnt_item": 6
+        },
+        {
+          "item": "Galho",
+          "qnt_item": 5
+        },
+        {
+          "item": "Granito",
+          "qnt_item": 4
+        },
+        {
+          "item": "Plastico",
+          "qnt_item": 3
+        },
+        {
+          "item": "Água",
+          "qnt_item": 1
+        },
+        {
+          "item": "Tecido",
+          "qnt_item": 2
+        }
+      ]
     }
   ]
 }

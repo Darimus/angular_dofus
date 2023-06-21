@@ -23,4 +23,15 @@ export class CalculadoraService {
     const url = `${this.API}/${id}`
     return this.http.delete<Item>(url)
   }
+
+  editar(pensamento: Item): Observable<Item> {
+    const url = `${this.API}/${pensamento.id}`
+    return this.http.put<Item>(url, pensamento )
+  }
+
+
+  buscarPorId(id: number): Observable<Item> {
+    const url = `${this.API}/${id}`
+    return this.http.get<Item>(url)
+  }
 }

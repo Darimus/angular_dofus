@@ -16,11 +16,11 @@ export class InputCalculadoraComponent implements OnInit{
     nome_item: "Manopla",
     qnt_item: 5,
     modelo: "modelo2",
-    receitas: {
-      item1: "Couro",
+    coeficiente: 500,
+    receitas: [{
+      item: "Couro",
       qnt_item: 10,
-      coeficiente: 500
-    }
+    }]
   }
 
   constructor(
@@ -40,4 +40,5 @@ export class InputCalculadoraComponent implements OnInit{
   cancelar() {
     this.route.navigate(["/listarItens"])
   }
+
 }

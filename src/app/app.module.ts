@@ -12,6 +12,7 @@ import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { ListarItensComponent } from './componentes/calculadora/listar-itens/listar-itens.component';
 import { ItemComponent } from './componentes/calculadora/item/item.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExcluirItemComponent } from './componentes/calculadora/excluir-item/excluir-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     InputCalculadoraComponent,
     RodapeComponent,
     ListarItensComponent,
-    ItemComponent
+    ItemComponent,
+    ExcluirItemComponent
   ],
   imports: [
     BrowserModule,
