@@ -29,7 +29,6 @@ export class CalculadoraService {
     return this.http.put<Item>(url, pensamento )
   }
 
-
   buscarPorId(id: number): Observable<Item> {
     const url = `${this.API}/${id}`
     return this.http.get<Item>(url)

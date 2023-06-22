@@ -20,6 +20,7 @@ export class InputCalculadoraComponent implements OnInit{
     receitas: [{
       item: "Couro",
       qnt_item: 10,
+      qnt_item_kamas: 0
     }]
   }
 
@@ -40,5 +41,14 @@ export class InputCalculadoraComponent implements OnInit{
   cancelar() {
     this.route.navigate(["/listarItens"])
   }
+
+  adicionarReceita() {
+    this.item.receitas.push({ item: '', qnt_item: 0 , qnt_item_kamas: 0});
+  }
+
+  removerReceita(index: number) {
+    this.item.receitas.splice(index, 1);
+  }
+
 
 }

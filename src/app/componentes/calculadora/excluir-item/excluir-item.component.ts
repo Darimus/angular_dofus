@@ -20,6 +20,7 @@ export class ExcluirItemComponent implements OnInit{
     receitas: [{
       item: "Couro",
       qnt_item: 10,
+      qnt_item_kamas: 10,
     }]
   }
 
@@ -47,5 +48,4 @@ export class ExcluirItemComponent implements OnInit{
     cancelar(){
       this.router.navigate(["/listarItens"])
     }
-
 }

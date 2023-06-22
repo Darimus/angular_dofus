@@ -5,23 +5,39 @@
   <form>
 
     <div class="nome-div">
-      <label class="padding-label" for="nome-item">Nome do item</label>
+      <label class="padding-label" for="nome-item">Nome do item: </label>
       <input type="textarea" class="input" id="nome-item" name="nome-item" placeholder="Digite o nome do item" [(ngModel)]="item.nome_item">
-      <label class="padding-label" for="qnt-item">Qnt</label>
-      <input type="number" class="input" id="qnt-item" name="qnt-item" placeholder="Digite a quantidade de itens desejada" [(ngModel)]="item.qnt_item">
+      <label class="padding-label" for="qnt-item"> Qnt a fazer: </label>
+      <input type="number" class="input padding_input_number" id="qnt-item" name="qnt-item" placeholder="Digite a quantidade de itens desejada" [(ngModel)]="item.qnt_item">
+
+      <label class="padding-label" for="coeficiente"> Coeficiente: </label>
+      <input type="number" class="input padding_input_number" id="coeficiente" name="coeficiente" [(ngModel)]="item.coeficiente">
     </div>
 
-    <div class="receita-div">
+    <div *ngFor="let receita of item.receitas; let i = index; let last = last" class="receita-div">
       <label for="receita">Receita do item</label><br>
-      <input type="text" class="input" id="receita-item1" name="receita-nome" placeholder="Receita do item" [(ngModel)]="item.receitas.item">
-      <input type="number" class="input" id="qnt-item1" name="receita-item" placeholder="Receita do item" [(ngModel)]="item.receitas.qnt_item">
+      <label class="padding-label" for="receita-item1">Nome: </label>
+      <input type="text" class="input" id="receita-item1" name="receita-nome" placeholder="Receita do item" [(ngModel)]="receita.item">
+
+      <br>
+
+      <label class="padding-label" for="receita-item1"> Qnt de itens: </label>
+      <input type="number" class="input padding_input_number" id="qnt-item1" name="receita-item" placeholder="Receita do item" [(ngModel)]="receita.qnt_item">
+
+      <label for="qnt-item-kamas" class="padding-label"> Qnt em Kamas: </label>
+      <input type="number" class="input padding_input_number" id="qnt-item-kamas" name="qnt-item-kamas" placeholder="Custo do Item em Kamas" [(ngModel)]="receita.qnt_item_kamas">
+
+      <br>
+
+      <button *ngIf="last" (click)="adicionarReceita()" class="botao botao_margin" >Adicionar Receita</button>
+      <button *ngIf="!last" (click)="removerReceita(i)" class="botao botao_margin" >Remover Receita</button>
     </div>
 
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
       <div class="radio-modelo">
         <label for="modelo1">
-          <input type="radio" id="modelo1" value="modelo1" name="modelo-card">
+          <input type="radio" id="modelo1" value="modelo1" name="modelo-card"  [(ngModel)]="item.modelo">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -30,13 +46,15 @@
         Prévia:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
-          <p class="conteudo">Teste</p>
-          <p class="autoria"><b> Teste </b></p>
+          <p class="conteudo">{{item.nome_item}}</p>
+          <p *ngFor="let receita of item.receitas">Qnt a fazer: {{receita.qnt_item}}</p>
+          <p *ngFor="let receita of item.receitas" class="autoria"><b>Qnt de {{receita.item}}: {{item.qnt_item * receita.qnt_item}}</b></p>
+          <p *ngFor="let receita of item.receitas" class="autoria"><b>Qnt em Kamas: {{receita.qnt_item * receita.qnt_item_kamas}}</b></p>
         </div>
       </div>
       <div class="radio-modelo">
         <label for="modelo2">
-          <input type="radio" id="modelo2" value="modelo2" name="modelo-card">
+          <input type="radio" id="modelo2" value="modelo2" name="modelo-card"  [(ngModel)]="item.modelo">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -46,14 +64,15 @@
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azuis claro">
           <p class="conteudo">{{item.nome_item}}</p>
-          <p *ngFor="let receita of item.receitas">{{receita.qnt_item}} qnt:</p>
-          <p *ngFor="let receita of item.receitas" class="autoria"><b>{{item.qnt_item * receita.qnt_item}}</b></p>
+          <p *ngFor="let receita of item.receitas">Qnt a fazer: {{receita.qnt_item}}</p>
+          <p *ngFor="let receita of item.receitas" class="autoria"><b>Qnt de {{receita.item}}: {{item.qnt_item * receita.qnt_item}}</b></p>
+          <p *ngFor="let receita of item.receitas" class="autoria"><b>Qnt em Kamas: {{receita.qnt_item * receita.qnt_item_kamas}}</b></p>
         </div>
       </div>
 
       <div class="radio-modelo">
         <label for="modelo3">
-          <input type="radio" id="modelo3" value="modelo3" name="modelo-card">
+          <input type="radio" id="modelo3" value="modelo3" name="modelo-card" [(ngModel)]="item.modelo">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -62,8 +81,10 @@
         Prévia:
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo3.png" alt="Aspas verde">
-          <p class="conteudo">Teste</p>
-          <p class="autoria"><b>Teste</b></p>
+          <p class="conteudo">{{item.nome_item}}</p>
+          <p *ngFor="let receita of item.receitas">Qnt a fazer: {{receita.qnt_item}}</p>
+          <p *ngFor="let receita of item.receitas" class="autoria"><b>Qnt de {{receita.item}}: {{item.qnt_item * receita.qnt_item}}</b></p>
+          <p *ngFor="let receita of item.receitas" class="autoria"><b>Qnt em Kamas: {{receita.qnt_item * receita.qnt_item_kamas}}</b></p>
         </div>
       </div>
     </div>

@@ -1,13 +1,17 @@
 <div class="pensamento {{ item.modelo }} ff-roboto-mono" [ngClass]="larguraItem()">
   <img src="/assets/imagens/{{ item.modelo }}.png" alt="Aspas coloridas">
-  <p class="conteudo">{{ item.nome_item }}</p>
-  <p class="autoria"><b>{{ item.qnt_item }}</b></p>
+  <p class="conteudo"><b>{{ item.nome_item }}</b></p>
+  <p class="autoria">Qnt de itens:<b>{{ item.qnt_item }}</b></p>
+  <p>Coeficiente: <b>{{item.coeficiente}}%</b></p>
+  <br>
+  <p><b>Receita:</b></p>
+  <p class="item" *ngFor="let receita of item.receitas">Qnt de <b>{{receita.item}}</b>: {{receita.qnt_item}}<br><b> Kamas por unidade:</b> {{receita.qnt_item_kamas}}<img class="logo-kamas" src="../../../../assets/imagens/logo-kama.webp" alt="Logo de Kamas"> <br><b>Total:</b> {{receita.qnt_item * receita.qnt_item_kamas}}<img class="logo-kamas" src="../../../../assets/imagens/logo-kama.webp" alt="Logo de Kamas"><br><hr></p>
 
   <div class="acoes">
-    <button class="botao-editar" routerLink="/pensamentos/editarPensamentos/{{item.id}}">
+    <button class="botao-editar" routerLink="/itens/editarItem/{{item.id}}">
       <img src="/assets/imagens/icone-editar.png" alt="Ícone de editar">
     </button>
-    <button class="botao-excluir" routerLink="/pensamentos/excluirPensamentos/{{item.id}}">
+    <button class="botao-excluir" routerLink="/itens/excluirItem/{{item.id}}">
       <img src="/assets/imagens/icone-excluir.png" alt="Ícone de excluir">
     </button>
   </div>

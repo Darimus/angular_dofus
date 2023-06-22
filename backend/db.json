@@ -1,43 +1,50 @@
 {
   "itens": [
     {
-      "id": 6,
-      "nome_item": "Manopla",
+      "id": 7,
+      "nome_item": "Cinto",
+      "qnt_item": 5,
+      "modelo": "modelo2",
+      "coeficiente": 200,
+      "receitas": [
+        {
+          "item": "Leite",
+          "qnt_item": 8,
+          "qnt_item_kamas": 9
+        },
+        {
+          "item": "Tronco",
+          "qnt_item": 10,
+          "qnt_item_kamas": 5
+        },
+        {
+          "item": "Plastico",
+          "qnt_item": 2,
+          "qnt_item_kamas": 10
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nome_item": "Cinto de citrado de bliblablu",
       "qnt_item": 5,
       "modelo": "modelo2",
       "coeficiente": 500,
       "receitas": [
         {
-          "item": "Couro",
-          "qnt_item": 8
+          "item": "Fogo",
+          "qnt_item": 31,
+          "qnt_item_kamas": 22
         },
         {
-          "item": "Leite",
-          "qnt_item": 7
+          "item": "Linho",
+          "qnt_item": 1,
+          "qnt_item_kamas": 3
         },
         {
-          "item": "Pedra",
-          "qnt_item": 6
-        },
-        {
-          "item": "Galho",
-          "qnt_item": 5
-        },
-        {
-          "item": "Granito",
-          "qnt_item": 4
-        },
-        {
-          "item": "Plastico",
-          "qnt_item": 3
-        },
-        {
-          "item": "Água",
-          "qnt_item": 1
-        },
-        {
-          "item": "Tecido",
-          "qnt_item": 2
+          "item": "Tronco",
+          "qnt_item": 30,
+          "qnt_item_kamas": 20
         }
       ]
     }

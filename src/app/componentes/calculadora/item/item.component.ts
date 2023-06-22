@@ -17,7 +17,7 @@ export class ItemComponent implements OnInit{
     receitas: [{
       item: "Linho",
       qnt_item: 3,
-
+      qnt_item_kamas: 3,
     }]
   }
 
