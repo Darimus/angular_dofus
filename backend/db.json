@@ -25,26 +25,16 @@
       ]
     },
     {
-      "id": 8,
-      "nome_item": "Cinto de citrado de bliblablu",
+      "id": 13,
+      "nome_item": "Manopla",
       "qnt_item": 5,
-      "modelo": "modelo2",
+      "modelo": "modelo3",
       "coeficiente": 500,
       "receitas": [
         {
-          "item": "Fogo",
-          "qnt_item": 31,
-          "qnt_item_kamas": 22
-        },
-        {
-          "item": "Linho",
-          "qnt_item": 1,
-          "qnt_item_kamas": 3
-        },
-        {
-          "item": "Tronco",
-          "qnt_item": 30,
-          "qnt_item_kamas": 20
+          "item": "Couro",
+          "qnt_item": 10,
+          "qnt_item_kamas": 0
         }
       ]
     }
