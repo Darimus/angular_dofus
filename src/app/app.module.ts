@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -11,8 +12,8 @@ import { InputCalculadoraComponent } from './componentes/calculadora/input-calcu
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { ListarItensComponent } from './componentes/calculadora/listar-itens/listar-itens.component';
 import { ItemComponent } from './componentes/calculadora/item/item.component';
-import { HttpClientModule } from '@angular/common/http';
 import { ExcluirItemComponent } from './componentes/calculadora/excluir-item/excluir-item.component';
+import { EditarItemComponent } from './componentes/calculadora/editar-item/editar-item.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import { ExcluirItemComponent } from './componentes/calculadora/excluir-item/exc
     RodapeComponent,
     ListarItensComponent,
     ItemComponent,
-    ExcluirItemComponent
+    ExcluirItemComponent,
+    EditarItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

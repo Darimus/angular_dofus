@@ -1,40 +1,40 @@
 {
   "itens": [
     {
-      "id": 7,
-      "nome_item": "Cinto",
-      "qnt_item": 5,
-      "modelo": "modelo2",
+      "id": 14,
+      "nome_item": "Cintaralho",
+      "qnt_item": 50,
+      "modelo": "modelo3",
       "coeficiente": 200,
       "receitas": [
         {
-          "item": "Leite",
-          "qnt_item": 8,
-          "qnt_item_kamas": 9
-        },
-        {
-          "item": "Tronco",
-          "qnt_item": 10,
-          "qnt_item_kamas": 5
+          "item": "Couro",
+          "qnt_item": 2,
+          "qnt_item_kamas": 8
         },
         {
           "item": "Plastico",
-          "qnt_item": 2,
+          "qnt_item": 5,
           "qnt_item_kamas": 10
+        },
+        {
+          "item": "Linha",
+          "qnt_item": 7,
+          "qnt_item_kamas": 3
         }
       ]
     },
     {
-      "id": 13,
-      "nome_item": "Manopla",
+      "id": 15,
+      "nome_item": "Manopla Editada",
       "qnt_item": 5,
-      "modelo": "modelo3",
+      "modelo": "modelo2",
       "coeficiente": 500,
       "receitas": [
         {
-          "item": "Couro",
-          "qnt_item": 10,
-          "qnt_item_kamas": 0
+          "item": "Darimus Editado",
+          "qnt_item": 20,
+          "qnt_item_kamas": 5
         }
       ]
     }
